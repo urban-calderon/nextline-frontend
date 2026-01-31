@@ -89,7 +89,7 @@ const emit = defineEmits<{
 const { getStatusColor, getStatusLabel, formatDate } = useTaskUI();
 
 const headers = [
-  { title: 'Tarea', align: 'start', key: 'title', width: '35%' },
+  { title: 'Titulo', align: 'start', key: 'title', width: '35%' },
   { title: 'Estado', align: 'start', key: 'status', width: '15%' },
   { title: 'Creado', align: 'start', key: 'createdAt', width: '20%' },
   { title: 'Vencimiento', align: 'start', key: 'dueDate', width: '20%' },
