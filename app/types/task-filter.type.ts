@@ -1,0 +1,1 @@
+export type TaskFilterType = 'all' | 'todo' | 'progress' | 'done';
