@@ -1,6 +1,6 @@
 import type { Task } from "@/interfaces/task.interface";
 
-export const useTask = async () => {
+export const useActionTask = async () => {
   const config = useRuntimeConfig();
   const API_URL = config.public.apiBase;
   const token = useCookie('auth_token');
@@ -30,6 +30,13 @@ export const useTask = async () => {
       body: task
     });
   };
+
+  const deleteTask = async (id: number) => {
+    return await $fetch(`${API_URL}/api/tasks/${id}`, {
+      method: 'DELETE',
+      headers: getHeaders(),
+    });
+  };
   
   return {
     tasks: data,
@@ -38,7 +45,8 @@ export const useTask = async () => {
     refresh,
     pending,
     createTask,
-    updateTask
+    updateTask,
+    deleteTask
   };
 };
   
