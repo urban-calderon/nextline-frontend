@@ -2,7 +2,7 @@
   <div>
     <SharedHeader @click:create="openCreateModal" />
     
-    <v-card class="rounded-lg" elevation="0" border>
+    <v-card class="ma-8 rounded-lg" elevation="0" border>
         <TaskTable 
             :items="tasks?.data || []" 
             @click:edit="openEditModal"
