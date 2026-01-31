@@ -26,6 +26,10 @@
 </template>
 
 <script setup lang="ts">
+definePageMeta({
+  layout: 'default',
+});
+
 import type { Task } from '@/interfaces/task.interface';
 import { useActionTask } from '@/composables/useActionTask';
 import TaskTable from '@/components/task/Table.vue';

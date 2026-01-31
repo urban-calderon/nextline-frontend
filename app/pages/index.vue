@@ -1,6 +1,6 @@
 <template>
-  <v-container class="fill-height bg-grey-lighten-5" fluid>
-    <v-row justify="center" align="center">
+  <v-container class="login-container bg-grey-lighten-5" fluid>
+    <v-row justify="center" align="center" class="fill-height">
       <v-col cols="12" sm="8" md="6" lg="4" xl="3">
         
         <v-card class="rounded-lg pa-8" elevation="0" border color="white">
@@ -110,3 +110,17 @@ const handleLogin = async () => {
   }
 };
 </script>
+
+<style scoped>
+.login-container {
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container :deep(.v-row) {
+  flex: 1;
+  min-height: 0;
+}
+</style>
